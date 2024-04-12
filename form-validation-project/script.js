@@ -55,6 +55,7 @@ function validate() {
         return true
     }
 
+    //function for error message
 function showError(message){
         const errorElement = document.getElementById("demo");
         errorElement.style.color = "red";
