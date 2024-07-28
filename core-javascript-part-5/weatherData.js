@@ -2,9 +2,9 @@ const fetchWeatherData = () => {
     return new Promise((resolve, reject) => {
       // Simulating an API call
       setTimeout(() => {
-        const weatherData = { temperature: 25, condition: 'sunny' };
+        const weatherData = { temperature: 75 + "F", condition: 'sunny' };
         resolve(weatherData);
-      }, 2000);
+      }, 1000);
     });
   }
   

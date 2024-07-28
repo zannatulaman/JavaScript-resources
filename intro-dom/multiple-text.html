@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="changeable">We are the student of MERN</h1>
+     <button onclick="changeText()">Click Me</button>
+   
+
+     <script>
+        var newText = ["web", "developer"];
+        var index = 0;
+        function changeText(){
+            const elements = document.querySelectorAll(".changeable");
+            elements.forEach(function(element){
+                element.textContent = newText[index];
+            });
+            index++;
+            if(index >=newText.length){
+               index=0; 
+            }
+        }
+     </script>
+</body>
+</html>

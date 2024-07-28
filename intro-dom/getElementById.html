@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn DOM</title>
+</head>
+<body>
+    <h1 id="heading">I am going to learning DOM concept</h1>
+     <button id="change-text">Click Me</button>
+    
+
+
+    <script>
+        const myText = document.getElementById("heading");
+        const myButton = document.getElementById("change-text");
+
+        //event listener
+        myButton.addEventListener("click", function(){
+            console.log(Clicked);
+        })
+    </script>
+</body>
+</html>

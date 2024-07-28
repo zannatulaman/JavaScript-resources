@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem Solving with DOM</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <p id="text-changes">This is paragraph tag</p>
+
+    <div>
+        <input type="text" id="inputText">
+        <button id="searchButton">Search</button>
+
+        <ul id="listItem">
+            <!-- DOM content executed here -->
+        </ul>
+
+    </div>
+
+    <div>
+        <h1 id="textElement">I love coding</h1>
+        <button id="button">Change</button>
+    </div>
+   <br>
+   <br>
+
+    <form onsubmit="return validate()">
+        <input type="text" id="text" placeholder="Enter your name">
+        <br>
+        <input type="email" id="email" placeholder="Enter your email">
+        <br>
+        <button id="submit">Submit</button>
+    </form>
+
+
+    <div>
+        <h1 id="textElement">I love coding</h1>
+        <button id="button">Change</button>
+    </div>
+    <div id="colorDiv" style="height: 40vh; background-color: white;">
+        <!-- This is the div whose background color will be changed to blue -->
+    </div>
+
+
+    <script>
+
+       function validate() {
+            
+       }
+
+
+
+
+
+
+
+
+
+
+
+
+        const textChanges = document.getElementById("text-changes");
+        textChanges.addEventListener("click", () => {
+            textChanges.innerHTML = "Hello, World!";
+            textChanges.style.fontSize = "2rem";
+            textChanges.style.color = "red";
+        })
+
+        const inputText = document.getElementById("inputText");
+        const searchButton = document.getElementById("searchButton");
+        const myList = document.getElementById("listItem");
+
+        searchButton.addEventListener("click", () => {
+            const textContent = inputText.value 
+            //console.log(textContent);
+
+           const createElement = document.createElement("li");
+           createElement.innerHTML = `${textContent} <button id=deleteButton>Delete</button>`
+           //console.log(createElement);
+           myList.appendChild(createElement);
+
+           const deleteButton = document.getElementById("deleteButton");
+           deleteButton.addEventListener("click", () => {
+            myList.removeChild(createElement);
+           })
+        })
+
+        //const textElement = document.getElementById("textElement");
+        //const buttonText = document.getElementById("button");
+
+        /*buttonText.addEventListener("click", () => {
+            textElement.innerHTML = "JavaScript"
+            textElement.style.backgroundColor = "Blue"
+            textElement.style.height = "40vh"
+            textElement.style.color = "white"    
+        })*/
+
+        const textElement = document.getElementById("textElement");
+        const buttonText = document.getElementById("button");
+        const colorDiv = document.getElementById("colorDiv");
+
+        buttonText.addEventListener("click", () => {
+            textElement.innerHTML = "JavaScript";
+            textElement.style.color = "white";
+
+            colorDiv.style.backgroundColor = "blue";
+        });
+
+    </script>
+</body>
+</html>

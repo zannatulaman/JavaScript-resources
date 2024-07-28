@@ -1,7 +1,7 @@
 
 
 const API = "https://jsonplaceholder.typicode.com/posts"
-fetch(API)
+//fetch(API)
 
 fetch(API)
     .then(response => {

@@ -1,0 +1,24 @@
+
+body{
+    background: url(./Music.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+    min-width: 100vh;
+}
+
+
+li{
+    text-align: center;
+    font-size: 1rem; 
+    list-style: none;
+    margin: auto;
+}
+
+.design{
+    text-align: center;
+    background-color: aliceblue;
+    width: 40%;
+    padding: 8px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}

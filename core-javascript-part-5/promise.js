@@ -1,10 +1,10 @@
 //create promise also return the resolved result
-const fatchData = () => {
+const fetchData = () => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             const data = {message: "Fetched Sucessfully"}
             const error = {message: "Fatched error"}
-            //resolve(data);
+            resolve(data);
             reject(error);
         }, 2000);
     })
@@ -12,7 +12,7 @@ const fatchData = () => {
 
 //sucess or failed status of the promise
 
-fatchData()
+fetchData()
     .then((result) => {
         console.log("Result", result)
     })

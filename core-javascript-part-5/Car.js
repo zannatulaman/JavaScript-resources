@@ -3,18 +3,18 @@ class Car{
         this.brand = brand
         this.model = model
         this.year = year
-        this.speed = 20;
+        this.speed = 50;
     }
 
     productBrand(amount) {
         this.speed += amount
-        console.log(`${this.brand} released new ${this.model} model in ${this.year}`);
+        console.log(`${this.brand} released now ${this.model} model in ${this.year}`);
         console.log(`${this.brand} is traveling to ${this.speed} mph`);
     }
     
     doBrake(amount){
-         if(this.speed - amount >= 0){
-           this.speed -= amount
+         if(this.speed - amount){
+           this.speed = this.speed - amount
         }else{
             this.speed = 0;
         }
@@ -27,5 +27,5 @@ class Car{
 
 const car1 = new Car("Toyota", "Camry", 2024);
      
-car1.productBrand(40);
-car1.doBrake(40);
+// car1.productBrand(40);
+car1.doBrake(30);

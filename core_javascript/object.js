@@ -16,7 +16,7 @@ console.log(person["technologies"]);
 
 // concatination Ahmed is enroll in MERN program
 console.log(person.firstName + " is enroll in " + person.program +" program ");
-// bracticnotation
+// bractic notation
 console.log(`${person.firstName} is enroll in ${person.program} program`)
 
 person.city = "New York";
