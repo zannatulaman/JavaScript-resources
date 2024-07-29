@@ -14,7 +14,7 @@ buttonSearch.addEventListener("click", () => {
                 console.log(info);
                 lyrics.innerHTML = ""; // Clear previous results
 
-                for (let i = 0; i < 4; i++) { // Change <= to < to avoid out of bounds error
+                for (let i = 0; i <= 5; i++) { // Change <= to < to avoid out of bounds error
                     const song = info.data[i];
                     console.log(song);
 
@@ -23,7 +23,7 @@ buttonSearch.addEventListener("click", () => {
 
                     // Create a new list item for each song
                     const createItem = document.createElement("li");
-                    createItem.classList.add("li");
+                    // createItem.classList.add("li");
                     createItem.innerHTML = `<div class="design"><strong>${songTitle}</strong> <br> <img src="${songImage}" alt="${songTitle} cover" /></div>`;
                      
                     //console.log(inputSong)
